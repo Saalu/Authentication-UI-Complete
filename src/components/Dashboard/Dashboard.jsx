@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar/Navbar'
+import Form from './Form/Form'
 
 
 const Dashboard = () => {
@@ -8,55 +10,19 @@ const Dashboard = () => {
 
 
     <main className='w-full h-screen flex'>
-      {/* <div className=" h-[100%]   w-[100%] md:w-[50%]  bg-gray-100 flex  justify-center items-center"> */}
       <div className=" h-[100%]   w-[100%]  flex  justify-center items-center">
       {/* form */}
         <div  className='w-[450px] h-[450px] lg:w-[940px]  md:w-[740px] bg-white rounded-lg shadow-md border-[.2px] border-gray-300 '>
-       <div className="header">
-        <nav>
-          <ul className='flex justify items-center  border-b-[.05px] border-gray-200'>
-          <li className='hover:bg-gray-200 h-10  py-2 px-4 hover:text-green-600 hover:border-b-2 hover:border-green-600'>First Link</li>
-          <li className='hover:bg-gray-200 h-10  py-2 px-4 hover:text-green-600 hover:border-b-2 hover:border-green-600'>First Link</li>
-          <li className='hover:bg-gray-200 h-10  py-2 px-4 hover:text-green-600 hover:border-b-2 hover:border-green-600'>First Link</li>
-        
-          </ul>
-        </nav>
-       </div>
       
+          <Navbar/>
+
         <div className="container  flex justify-between items-start  ">
         <div className="box-1 p-[12px] h-[400px]  w-[40%] md:w-[50%]   " >
           <div className='text-lg text-slate-600  mb-4 font-bold'>Post your content</div>
         {/* ===========Form ======================= */}
-      {/* <div className=" h-[100%]   w-[100%] md:w-[50%]  bg-gray-100 flex  justify-center items-center"> */}
           <div className="  ">
-          {/* form */}
-            <form onSubmit='' className='w-[340px] h-[300px]  lg:w-[420px]
-            bg-white rounded-lg   border-gray-100 p-2 pt-4 mt-3'>
-                
-                <label htmlFor="" className=" text-gray-700  text-md">Title</label>
-                <br />
-                <input type="text" placeholder='The Legend Killer' value=''
-                onChange={e => setEmail(e.target.value)} className='w-[320px] lg:w-[400px]
-                  h-[40px] text-sm  mb-1   p-2 border-gray-200 border-[.05px] rounded-md shadow-sm focus:outline-none hover:border-gray-800 focus:border-green-600' />
-                <br />
-                <label htmlFor="" className=" text-gray-700 text-md">Content</label>
-                <br />
-                <textarea name="" id="" cols="30" rows="10" placeholder='Content *' value=''
-                onChange={e => setEmail(e.target.value)} className='w-[320px] lg:w-[400px]
-                  h-[40px] text-sm  mb-1   p-2 border-gray-200 border-[.05px] rounded-md shadow-sm focus:outline-none hover:border-gray-800 focus:border-green-600' />
-                <br />
-                {/* <textarea name="" id="" cols="30" rows="10"></textarea> */}
-                <label htmlFor="" className=" text-gray-700 text-md">Author</label>
-                <br />
-                <input type="text" placeholder='John Doe' value=''
-                onChange={e => setEmail(e.target.value)} className='w-[320px] lg:w-[400px]
-                  h-[40px] text-sm  mb-1   p-2 border-gray-200 border-[.05px] rounded-md shadow-sm focus:outline-none hover:border-gray-800 focus:border-green-600' />
-                <br />
-                <br />
-              
-                <button className="w-[320px] h-[40px]  bg-green-600 font-bold lg:text-md
-                text-white  px-1 text-sm shadow-sm rounded-full">Create Post</button>
-            </form>
+          {/*================= form============ */}
+          <Form/>
           </div>
   
         {/* ===========Form End ======================= */}
